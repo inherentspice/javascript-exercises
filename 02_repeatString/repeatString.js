@@ -1,10 +1,14 @@
 const repeatString = function(string, freq) {
-  let echoString = string
-  for (let i = 1; i < freq; i++) {
-    echoString += string;
-  };
+  let echoString = '';
+  if (freq > 0) {
+    for (let i = 0; i < freq; i++) {
+      echoString += string;
+    };
+  } else if (freq < 0) {
+    return 'ERROR'
+  }
   return echoString
-};
+}
 
 // Do not edit below this line
 module.exports = repeatString;
